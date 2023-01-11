@@ -1,44 +1,94 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Electronic SAS</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-  <body style="background-color:#F10086;">
-    <div class="container mt-3" style="background-color: #F582A7;">
-        <h2 style="color:#180A0A ;">Electronic SAS</h2>        
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="color:#711A75 ;">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" style="color:#711A75 ;">Administrador</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" style="color:#711A75 ;">Inventarios</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="ingresarproducto.html">Ingresar producto</a></li>
-              <li><a class="dropdown-item" href="actualizarproducto.html">Actualizar producto</a></li> 
-              <li><a class="dropdown-item" href="eliminarproducto.html">Eliminar producto</a></li>
-              <li><a class="dropdown-item" href="consultarproducto.html">Consultar producto</a></li>    
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" style="color:#711A75 ;">Utilidades</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="calcularcompra.html">Calcular compra</a></li>
-              <li><a class="dropdown-item" href="conversorgigas.html">Calcular medida</a></li>    
-            </ul>
-          </li>
-        </ul>
-      </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electronic SAS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body style="background-color:#F10086;">
+  <div class="container mt-3" style="background-color: #F582A7;">
+    <h2 style="color:#180A0A ;">Electronic SAS</h2>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html" style="color:#711A75 ;">Inicio</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" style="color:#711A75 ;">Administrador</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="PHP/Crear_Base_Datos.php">Crear Base de Datos</a></li>
+          <li><a class="dropdown-item" href="PHP/Crear_Tabla.php">Crear tabla</a></li>
+          <li><a class="dropdown-item" href="PHP/Backup.php">Crear Backup</a></li>
+          <li><a class="dropdown-item" href="PHP/Pdf.php">Crear PDF</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" style="color:#711A75 ;">Inventarios</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="ingresarproducto.html">Ingresar producto</a></li>
+          <li><a class="dropdown-item" href="actualizarproducto.html">Actualizar producto</a></li>
+          <li><a class="dropdown-item" href="eliminarproducto.html">Eliminar producto</a></li>
+          <li><a class="dropdown-item" href="consultarproducto.html">Consultar producto</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" style="color:#711A75 ;">Utilidades</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="calcularcompra.html">Calcular compra</a></li>
+          <li><a class="dropdown-item" href="conversorgigas.html">Calcular medida</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Info.html" style="color:#711A75 ;">Acerca de mi</a>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <div class="container mt-3" style="background-color: white;">
+    <h3>Introducción</h3>
+    <br>
+    <p>
+      Esta página se desarrolla durante la realización del curso Programación De
+      Sitios Web el cual pertenece al pénsum del programa de Ingeniería De Sistemas de la UNAD.
+    </p>
+    <p>
+      Se desarrolla utilizando HTML como lenguaje de estructura, framework Bootstrap y CSS como
+      lenguaje de estilo en su parte Front-End o del lado del cliente, y se utilizo JavaScript
+      como lenguaje de programación permitiendo la conexión con la base de datos, se utiliza
+      MySQL como motor de base de datos, esto en su parte Back-End o del lado del servidor.
+    </p>
+    <p>
+      En la pestaña de administrador se encuentra accesos para la creación de la base de datos,
+      además de la creación de la tabla que usaremos, así como la generación de un PDF con la
+      información alojada en la base de datos y un Backup para respaldar dicha información.
+    </p>
+    <p>
+      En la pestaña inventarios encontraremos 4 pestañas que nos llevaran a 4 diferentes formularios donde
+      podremos ingresar la información del producto, actualizarla, eliminarla y consultarla.
+    </p>
+    <p>
+      Además contamos con la pestaña utilidades, en la cual tendremos dos formularios que nos
+      permitirán realizar algunas operaciones para conocer la ganancia e impuestos de un producto,
+      además de poder realizar la conversión de algunas medidas.
+    </p>
+    <br>
+  </div>
+  <br>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+  <br><br>
+  <footer style="color: black;">Andres Vargas 10/01/2023</footer>
 </body>
 
 </html>

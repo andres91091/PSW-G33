@@ -1,67 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <title>Calcular precio</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <title>Calcular precio</title>
 </head>
-<body style="background-color: #3BACB6;">    
-    <div class="container">
-        <h1>Electronic SAS</h1>
-        
-        <div class="container" style="width:500px;background-color:#B3E8E5; ;">
 
-            <h2>Calcular precio</h2>
-          
-          
-          <script>
-            function calcular(){
-                
-                var a = document.f1.vc.value;
-                var b = document.f1.put.value;
-                var c = document.f1.iva.value;
-                var vv = document.f1.vvf.value;
-                var uv = document.f1.un.value;
-                vv=parseFloat(a)+(parseFloat(a)*(parseFloat(b)/100))+(parseFloat(a)*(parseFloat(c)/100));
-                uv=(parseFloat(a)*(parseFloat(b)/100))
-                document.f1.vvf.value=vv;
-                document.f1.un.value=uv;
-                
-                }          
-          
-          </script>          
-          
-          <form name="f1" action="calcularcompra.html" method="POST">
-              <div class="form-group">
-                  
-                <label for="valorcompra">Valor compra:</label>
-                <input type="text" class="form-control" id="vc" placeholder="Ingrese el precio de compra" name="vc">              
-                <br>
-                <label for="porcutilidad">Porcentaje utilidad:</label>
-                <input type="text" class="form-control" id="put" placeholder="Ingrese el porcentaje de utilidad" name="put">
-                <br>
-                <label for="porciva">Porcentaje IVA:</label>
-                <input type="text" class="form-control" id="iva" placeholder="Ingrese el porcentaje del IVA" name="iva">
-                <br>
-                <input type="Button" name="" value="Calcular" onclick="calcular()" class="btn btn-primary" style="width: 90px; margin-left: 30%;transform: translateX(-80%);background-color: blue;">
-                <input type="Button" name="" value="Limpiar" onclick="reset()" class="btn btn-primary" style="width: 90px; margin-left: 30%;transform: translateX(-80%)">
-                <br><br>
-                <label for="valorventa">Valor venta final:</label>
-                <input type="text" class="form-control" id="vvf" name="vvf" placeholder="Valor venta final" disabled>
-                <br>
-                <label for="utilidadneta">Valor utilidad neta:</label>
-                <input type="text" class="form-control" id="un" name="un" placeholder="Valor utilidad neta" disabled>
-                <br>
-            
-              </div>
-          
-            </form>               
-          </div>
-        
+<body style="background-color: #3BACB6;">
+  <div class="container mt-3" style="background-color: #B3E8E5;">
+    <h2 style="color:#180A0A ;">Electronic SAS</h2>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html" style="color:#0b055c">Inicio</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" style="color:#0b055c ;">Administrador</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="PHP/Crear_Base_Datos.php">Crear Base de Datos</a></li>
+          <li><a class="dropdown-item" href="PHP/Crear_Tabla.php">Crear tabla</a></li>
+          <li><a class="dropdown-item" href="PHP/Backup.php">Crear Backup</a></li>
+          <li><a class="dropdown-item" href="PHP/Pdf.php">Crear PDF</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" style="color:#0b055c ;">Inventarios</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="ingresarproducto.html">Ingresar producto</a></li>
+          <li><a class="dropdown-item" href="actualizarproducto.html">Actualizar producto</a></li>
+          <li><a class="dropdown-item" href="eliminarproducto.html">Eliminar producto</a></li>
+          <li><a class="dropdown-item" href="consultarproducto.html">Consultar producto</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" style="color:#0b055c ;">Utilidades</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="calcularcompra.html">Calcular compra</a></li>
+          <li><a class="dropdown-item" href="conversorgigas.html">Calcular medida</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Info.html" style="color:#0b055c ;">Acerca de mi</a>
+      </li>
+    </ul>
+  </div>
+  <br><br>
+  <div class="container">
 
+    <div class="container" style="width:500px;background-color:#B3E8E5">
+
+      <h2>Calcular precio</h2>
+
+
+      <script>
+        function calcular() {
+
+          var a = document.f1.vc.value;
+          var b = document.f1.put.value;
+          var c = document.f1.iva.value;
+          var vv = document.f1.vvf.value;
+          var uv = document.f1.un.value;
+          vv = parseFloat(a) + (parseFloat(a) * (parseFloat(b) / 100)) + (parseFloat(a) * (parseFloat(c) / 100));
+          uv = (parseFloat(a) * (parseFloat(b) / 100))
+          document.f1.vvf.value = vv;
+          document.f1.un.value = uv;
+
+        }
+
+      </script>
+
+      <form name="f1" action="calcularcompra.html" method="POST">
+        <div class="form-group">
+
+          <label for="valorcompra">Valor compra:</label>
+          <input type="number" class="form-control" id="vc" placeholder="Ingrese el precio de compra" name="vc">
+          <br>
+          <label for="porcutilidad">Porcentaje utilidad:</label>
+          <input type="text" class="form-control" id="put" placeholder="Ingrese el porcentaje de utilidad" name="put">
+          <br>
+          <label for="porciva">Porcentaje IVA:</label>
+          <input type="text" class="form-control" id="iva" placeholder="Ingrese el porcentaje del IVA" name="iva">
+          <br>
+          <input type="Button" name="" value="Calcular" onclick="calcular()" class="btn btn-primary"
+            style="width: 90px; margin-left: 30%;transform: translateX(-80%);background-color: blue;">
+          <input type="Button" name="" value="Limpiar" onclick="reset()" class="btn btn-primary"
+            style="width: 90px; margin-left: 30%;transform: translateX(-80%)">
+          <br><br>
+          <label for="valorventa">Valor venta final:</label>
+          <input type="text" class="form-control" id="vvf" name="vvf" placeholder="Valor venta final" disabled>
+          <br>
+          <label for="utilidadneta">Valor utilidad neta:</label>
+          <input type="text" class="form-control" id="un" name="un" placeholder="Valor utilidad neta" disabled>
+          <br>
+
+        </div>
+
+      </form>
     </div>
+  </div>
+  <br><br>
+  <footer style="color: black;">Andres Vargas 10/01/2023</footer>
 </body>
+
 </html>
